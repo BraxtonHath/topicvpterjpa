@@ -12,6 +12,14 @@ public class Topic {
     private String title;
     private String description;
 
+    public Topic() { }
+
+    public Topic(String title, String description) {
+        this.title = title;
+        this.description = description;
+    }
+
+
     public long getId() {
         return id;
     }
@@ -36,7 +44,4 @@ public class Topic {
         this.description = description;
     }
 
-    public Topic() {
-
-    }
 }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.2.0/css/bootstrap.min.css}" />
+
+    <title>Topic Detail</title>
+</head>
+<body class="container">
+
+
+
+    <h1>details</h1>
+
+
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title" th:text="${topic.title}"></h3>
+        </div>
+        <div class="panel-body">
+            <div th:text="${topic.description}"></div>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>
