@@ -10,9 +10,9 @@ public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String commenterName;
+    private String commentername;
     private String message;
-    
+
     @ManyToOne
     @JoinColumn(name = "topic_id")
     private Topic topic;
@@ -20,6 +20,12 @@ public class Comment {
 
     public Comment() {
 
+    }
+
+    public Comment(String commentername, String message, Topic topic) {
+        this.commentername = commentername;
+        this.message = message;
+        this.topic = topic;
     }
 
     public long getId() {
@@ -30,12 +36,12 @@ public class Comment {
         this.id = id;
     }
 
-    public String getCommenterName() {
-        return commenterName;
+    public String getCommentername() {
+        return commentername;
     }
 
-    public void setCommenterName(String commenterName) {
-        this.commenterName = commenterName;
+    public void setCommentername(String commenterName) {
+        this.commentername = commenterName;
     }
 
     public String getMessage() {
